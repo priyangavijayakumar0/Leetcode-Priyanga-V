@@ -1,0 +1,16 @@
+// Last updated: 9/2/2026, 9:46:33 AM
+1class Solution {
+2    public int findMin(int[] nums) {
+3        int left = 0, right = nums.length - 1;
+4        while (left < right) {
+5            int mid = left + (right - left) / 2;
+6            if (nums[mid] > nums[right]) {
+7                left = mid + 1;
+8            } else {
+9                right = mid;
+10            }
+11        }
+12        return nums[left];
+13    }
+14}
+15
